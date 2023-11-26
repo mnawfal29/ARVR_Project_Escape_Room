@@ -1,0 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+public class Tutorialtextmanager : MonoBehaviour
+{
+    public GameManager gm;
+    public Text tex;
+    // Start is called before the first frame update
+    void Start()
+    {
+        gm = GameObject.FindObjectOfType<GameManager>();
+        tex = gameObject.GetComponent<Text>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        tex.text = gm.tex;
+    }
+}
